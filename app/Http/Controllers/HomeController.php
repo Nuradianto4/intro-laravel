@@ -10,4 +10,14 @@ class HomeController extends Controller
     {
     	return view('home');
     }
+
+    public function tabel()
+    {
+    	return view('items/tabel');
+    }
+
+    public function datatable()
+    {
+    	return view('items/data-table');
+    }
 }
