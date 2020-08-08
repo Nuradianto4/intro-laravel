@@ -29,7 +29,7 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-   @yield('content');
+   @yield('content')
   </div>
   <!-- /.content-wrapper -->
 

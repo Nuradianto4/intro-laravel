@@ -13,14 +13,13 @@ class CreatePertanyaanTable extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('pertanyaan');
         Schema::create('pertanyaan', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('judul');
             $table->longText('isi');
-            $table->date('tanggal_dibuat');
-            $table->date('tanggal_diperbarui');
-            $table->unsignedBigInteger('profil_id');
+            $table->date('tanggal_dibuat')->nullable();
+            $table->date('tanggal_diperbarui')->nullable();
+            $table->unsignedBigInteger('profil_id')->nullable();
             $table->foreign('profil_id')->references('id')->on('profil');
             $table->timestamps();
         });
